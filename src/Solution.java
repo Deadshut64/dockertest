@@ -1,4 +1,5 @@
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 
@@ -7,6 +8,14 @@ public class Solution {
         BufferedReader reader =  new BufferedReader(new InputStreamReader(System.in));
         Man man = new Man("Sergey");
         System.out.println(man.getName());
+        String s = null;
+        try {
+            s = reader.readLine();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        man.setName(s);
+        System.out.println(s);
     }
 
     @Override
