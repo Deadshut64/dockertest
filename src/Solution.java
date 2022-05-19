@@ -11,6 +11,9 @@ public class Solution {
         String s = null;
         try {
             s = reader.readLine();
+            if (s.equals("Sergey")){
+                s = "Admin";
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }
